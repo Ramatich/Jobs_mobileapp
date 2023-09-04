@@ -5,13 +5,13 @@ import axios from 'axios'
 const useFetch =async (endpoint, query) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading ] = useState(false);
-    const[error, setError] = useState(null);
+    const [error, setError] = useState(null);
     const axios = require('axios');
     const options = {
     method: 'GET',
     url: 'https://jsearch.p.rapidapi.com/search/${endpoint}',
     headers: {
-        'X-RapidAPI-Key':'008cc76139mshef7ffac93a0c1cap1a8be4jsn5cfdcdd7a6a5' ,
+        'X-RapidAPI-Key':"008cc76139mshef7ffac93a0c1cap1a8be4jsn5cfdcdd7a6a5" ,
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     },
     params: { ...query
