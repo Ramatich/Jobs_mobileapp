@@ -1,4 +1,4 @@
-import {useState } from 'react'
+import { useState } from "react";
 import {View, Text, TouchableOpacity, FlatList, ActivityIndicator} from 'react-native'
 import { useRouter } from 'expo-router'
 import {COLORS, SIZES } from '../../../constants';
@@ -12,9 +12,9 @@ const Popularjobs = () => {
   const {data, isLoading, error } = useFetch(
     'search', {
       query: 'React developer',
-      num_pages :1
+      num_pages :"1",
     }
-  )
+  );
   console.log(data);
   return (
     <View style= {styles.container}>
@@ -35,7 +35,7 @@ const Popularjobs = () => {
         ):
         (
           <FlatList
-          data={[2,3,4,5,6,7]}
+          data={[1,2,3]}
           renderItem={({item}) =>(
             <PopularJobCard
             item ={item}
@@ -43,7 +43,7 @@ const Popularjobs = () => {
 
           )}
 
-          keyExtractor={item => item?.job_id}
+          keyExtractor={(item) => item.job_id}
           contentContainerStyle = {{ columnGap:SIZES.medium}}
           horizontal
           
