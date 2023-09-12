@@ -25,7 +25,7 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
         {job.job_title}
         </Text>
         <Text style={styles.jobType}>
-          {job.job_emloyment_type}
+          {job.job_employment_type}
 
         </Text>
       </View>
@@ -38,4 +38,4 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
   )
 }
 
-export default NearbyJobCard
+export default NearbyJobCard; 
